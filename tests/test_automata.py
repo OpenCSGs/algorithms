@@ -2,6 +2,7 @@ from algorithms.automata import DFA
 
 
 import unittest
+import unittest
 
 
 class TestDFA(unittest.TestCase):
@@ -74,9 +75,11 @@ class TestDFA(unittest.TestCase):
 
     def test_empty_string_with_final_start(self):
         # Test case where the string is empty and start state is a final state
+        str = 'aab'
         start_final = ['q0']
         result = DFA(self.transitions, self.start, start_final, '')
         self.assertTrue(result)
+
 
 if __name__ == '__main__':
     unittest.main()
