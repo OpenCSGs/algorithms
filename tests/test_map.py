@@ -166,6 +166,13 @@ class TestIsSomorphic(unittest.TestCase):
         self.assertFalse(is_isomorphic("foo", "bar"))
         self.assertTrue(is_isomorphic("paper", "title"))
 
+    def test_isomorphic_edge_cases(self):
+        self.assertTrue(is_isomorphic("13", "42"))
+        self.assertFalse(is_isomorphic("aa", "ab"))
+        self.assertFalse(is_isomorphic("ab", "aa"))
+        self.assertTrue(is_isomorphic("paper", "title"))
+        self.assertFalse(is_isomorphic("ab", "cdcd"))
+
 
 class TestLongestPalindromicSubsequence(unittest.TestCase):
     def test_longest_palindromic_subsequence_is_correct(self):
